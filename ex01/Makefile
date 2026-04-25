@@ -4,6 +4,7 @@ NAME = bureau
 SRC_DIR = ./
 SRCS = $(SRC_DIR)main.cpp \
 	   $(SRC_DIR)Bureaucrat.cpp\
+	   $(SRC_DIR)Form.cpp\
 
 OBJ_DIR = .build/
 OBJS = $(SRCS:$(SRC_DIR)%.cpp=$(OBJ_DIR)%.o)

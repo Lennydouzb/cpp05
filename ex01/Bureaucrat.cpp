@@ -6,7 +6,7 @@
 /*   By: ldesboui <ldesboui@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 10:12:45 by ldesboui          #+#    #+#             */
-/*   Updated: 2026/04/23 16:48:59 by ldesboui         ###   ########.fr       */
+/*   Updated: 2026/04/25 10:11:55 by ldesboui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "Bureaucrat.hpp"
@@ -61,7 +61,15 @@ void				Bureaucrat::increment()
 
 void				Bureaucrat::signForm(Form &aForm)
 {
-	aForm.beSigned(*this);
+	try
+	{
+		aForm.beSigned(*this);
+		std::cout << this->name << " signed " << aForm.getName() << std::endl;
+	}
+	catch (std::exception &e)
+	{
+		std::cerr << this->name << " couldn't sign " << aForm.getName() << " because " << e.what() << std::endl;
+	}
 }
 
 void				Bureaucrat::decrement()

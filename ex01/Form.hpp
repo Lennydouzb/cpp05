@@ -6,7 +6,7 @@
 /*   By: ldesboui <ldesboui@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 15:51:01 by ldesboui          #+#    #+#             */
-/*   Updated: 2026/04/24 16:12:28 by ldesboui         ###   ########.fr       */
+/*   Updated: 2026/04/25 10:11:01 by ldesboui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #pragma once
@@ -31,10 +31,9 @@ class Form
 		
 
 		const std::string	getName() const;
-		std::string			setIsSigned();
 		bool				getIsSigned() const;
-		const int			getSignGrade() const;
-		const int			getExecGrade() const;
+		int			getSignGrade() const;
+		int			getExecGrade() const;
 		void				beSigned(Bureaucrat &aBureaucrat);
 		class		GradeTooHighException : public std::exception
 		{
