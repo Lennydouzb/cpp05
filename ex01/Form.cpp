@@ -6,7 +6,7 @@
 /*   By: ldesboui <ldesboui@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 16:12:14 by ldesboui          #+#    #+#             */
-/*   Updated: 2026/04/25 13:05:11 by ldesboui         ###   ########.fr       */
+/*   Updated: 2026/04/25 18:22:08 by ldesboui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,12 @@ Form::Form(const Form& aForm) : name(aForm.name), signGrade(aForm.signGrade), ex
 }
 
 Form::~Form() {}
+
+Form &Form::operator=(const Form& other)
+{
+	(void)other;
+	return (*this);
+}
 
 const std::string Form::getName() const
 {

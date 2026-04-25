@@ -6,10 +6,11 @@
 /*   By: ldesboui <ldesboui@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/25 12:52:55 by ldesboui          #+#    #+#             */
-/*   Updated: 2026/04/25 18:21:25 by ldesboui         ###   ########.fr       */
+/*   Updated: 2026/04/25 18:25:11 by ldesboui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "RobotomyRequestForm.hpp"
+
 RobotomyRequestForm::RobotomyRequestForm() : AForm("Robotomy Form", 72, 45), target("Something")
 {
 }
