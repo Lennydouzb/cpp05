@@ -6,7 +6,7 @@
 /*   By: ldesboui <ldesboui@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 10:48:34 by ldesboui          #+#    #+#             */
-/*   Updated: 2026/04/25 10:17:14 by ldesboui         ###   ########.fr       */
+/*   Updated: 2026/04/25 13:04:46 by ldesboui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "Bureaucrat.hpp"
@@ -116,6 +116,7 @@ int	main(void)
 			std::cout << aBur;
 			aBur.signForm(aForm);
 			std::cout << aForm;
+			aBur.signForm(aForm);
 		}
 		catch (std::exception &e)
 		{

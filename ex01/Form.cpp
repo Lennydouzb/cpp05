@@ -6,7 +6,7 @@
 /*   By: ldesboui <ldesboui@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 16:12:14 by ldesboui          #+#    #+#             */
-/*   Updated: 2026/04/25 10:12:41 by ldesboui         ###   ########.fr       */
+/*   Updated: 2026/04/25 13:05:11 by ldesboui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,10 +68,15 @@ int Form::getExecGrade() const
 
 void Form::beSigned(Bureaucrat &aBureaucrat)
 {
-	if (aBureaucrat.getGrade() > this->signGrade)
-		throw Form::GradeTooLowException();
+	if (this->isSigned == false)
+	{
+		if (aBureaucrat.getGrade() > this->signGrade)
+			throw Form::GradeTooLowException();
+		else
+			this->isSigned = true;
+	}
 	else
-		this->isSigned = true;
+		std::cout << this->name << " has already been signed" << std::endl;
 }
 
 const char* Form::GradeTooHighException::what() const throw()
